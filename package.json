@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev" : "nodemon",
-    "build" : "rimraf ./build && tsc",
-    "start" : "npm-run build && node build/index.js"
+    "dev": "nodemon",
+    "build": "rimraf ./build && tsc",
+    "start": "npm-run build && node build/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "typescript": "^4.7.3"
+    "typescript": "^4.7.3",
+    "venom-bot": "^4.1.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.41",

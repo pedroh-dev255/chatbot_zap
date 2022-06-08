@@ -1,0 +1,22 @@
+{
+  "name": "a",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "nodemon",
+    "build" : "rimraf ./build && tsc",
+    "start" : "npm-run build && node build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.41",
+    "nodemon": "^2.0.16",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.8.1"
+  }
+}

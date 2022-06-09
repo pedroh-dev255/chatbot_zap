@@ -13,8 +13,12 @@ app.get('/status', (req: Request, res: Response)=>{
 })
 
 app.post('/send',async (req: Request, res: Response)=>{
+    const {number, message} = req.body
+    
     try{
-        await sender.sendText("5563992129216@c.us", "|Hoje tem cu?")
+        await sender.sendText(number, message)
+        
+        return res.status(200).json()
     } catch (error){
         console.log("error")
         res.status(500).json({status: "error", message: error})

@@ -5,13 +5,20 @@ class Sender{
     private cliente: Whatsapp
 
     constructor() {
-        
+        this.Initialize()
     }
 
+    async sendText(to: string, body: string){
+
+        //this.sendText("5563992464215@c.us", "Hello word")
+
+
+       await this.cliente.sendText(to, body)
+    }
+
+
     private Initialize(){
-        const qr = (base64Qrimg: string) => {
-            console.log()
-        }
+        const qr = (base64Qrimg: string) => {}
 
         const status = (statusSession: string) => {
               
@@ -19,11 +26,11 @@ class Sender{
 
         const start = (cliente: Whatsapp) => {
             this.cliente = cliente
+
+            
         }
 
-        create('ws-dev', qr, status)
-        .then((cliente) =>start(cliente))
-        .catch((error) => console.error(error))
+        create('ws-sander-dev', qr, status).then((cliente) =>start(cliente)).catch((error) => console.error(error))
     }
 }
 
